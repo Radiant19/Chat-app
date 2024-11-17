@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js"
 import messageRoutes from "./routes/messageRoutes.js"
 import userRoutes from "./routes/userRoutes.js"
-
+import { app,server } from "./socket/socket.js";
 import Connection from "./db/connecttoMongoose.js";
 import cookieParser from "cookie-parser";
-const app = express();
+
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
@@ -25,6 +25,6 @@ app.use("/api/users",userRoutes)
 // });
 
 
-app.listen(PORT, async () => {
+server.listen(PORT, async () => {
 Connection(),
 console.log(`Server Running on port ${PORT}`)});
