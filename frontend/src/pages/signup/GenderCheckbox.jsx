@@ -23,12 +23,12 @@
 
 import React from 'react';
 
-const GenderCheckbox = ({ selectedGender, onCheckboxChange }) => {
+const GenderCheckbox = ({  onCheckboxChange , selectedGender}) => {
   return (
     <div className="flex items-center gap-6">
       <label className="text-sm font-medium text-gray-200">Gender</label>
       <div className="flex gap-4">
-        <label className="flex items-center gap-1 cursor-pointer">
+        <label className={`flex items-center gap-1 cursor-pointer ${selectedGender === "male" ? "selected" : ""}`}>
           <input
             type="radio"
             name="gender"
@@ -39,7 +39,7 @@ const GenderCheckbox = ({ selectedGender, onCheckboxChange }) => {
           />
           <span className="text-gray-200">Male</span>
         </label>
-        <label className="flex items-center gap-1 cursor-pointer">
+        <label className={`flex items-center gap-1 cursor-pointer ${selectedGender === "female" ? "selected" : ""}`}>
           <input
             type="radio"
             name="gender"

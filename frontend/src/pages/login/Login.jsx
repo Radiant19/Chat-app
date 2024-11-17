@@ -50,6 +50,7 @@
 
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -84,12 +85,12 @@ const Login = () => {
           </div>
 
           <div className="flex items-center justify-between">
-            <a 
-              href="#" 
+            <Link
+              to="/signup" 
               className="text-sm text-sky-400 hover:text-sky-300 transition duration-200"
             >
               Don't have an account?
-            </a>
+            </Link>
           </div>
 
           <button 
