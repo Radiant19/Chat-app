@@ -14,7 +14,7 @@ export const SocketContextProvider = ({ children }) => {
     const {authUser} = useAuthContext();
     useEffect(()=>{
         if(authUser){
-            const socket = io("https://chat-app-g6no.onrender.com",{
+            const socket = io("https://chat-app-task-w28c.onrender.com/",{
                 query:{
                     userId:authUser._id
                 }
