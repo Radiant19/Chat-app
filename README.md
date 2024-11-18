@@ -64,6 +64,6 @@ Start the app
 
 npm start
 
-
+works on local host having trouble in deploying so please clone and check my site
  
 
